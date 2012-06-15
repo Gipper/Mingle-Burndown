@@ -1,0 +1,41 @@
+--- 
+- id: 1140
+  name: Status
+  description: ""
+  type_description: Managed text list
+- id: 1141
+  name: Priority
+  description: ""
+  type_description: Managed text list
+- id: 1142
+  name: Development Started On
+  description: ""
+  type_description: Managed text list
+- id: 1143
+  description: ""
+  name: Development Completed On
+  type_description: Date
+- id: 1144
+  description: ""
+  name: Added On
+  type_description: Date
+- id: 1145
+  description: ""
+  name: Estimate - Planning
+  type_description: Formula  
+- id: 1146
+  description: ""
+  name: Risk
+  type_description: Managed text list  
+- id: 1147
+  description: ""
+  name: Task Estimate
+  type_description:  Managed text list
+- id: 1148
+  description: 
+  name: Estimate - Task
+  type_description:  Managed text list
+- id: 1149
+  description: Individual assigned to a work item
+  name: Owner
+  type_description: User  

@@ -1,0 +1,16 @@
+---
+- project_id: 78
+  login: groucho
+  name: Groucho Marx
+  version_control_user_name: gmarx
+  email: gmarx@example.com    
+- project_id: 78
+  login: harpo
+  name: Harpo Marx
+  version_control_user_name:
+  email: kmarx@example.com
+- project_id: 78
+  login: karl
+  name: Karl Marx
+  version_control_user_name: kmarx
+  email: kmarx@example.com

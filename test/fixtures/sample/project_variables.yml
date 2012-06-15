@@ -1,0 +1,6 @@
+--- 
+- name: Current Release
+  display_value: 'Release 3'
+  
+- name: Current Sprint
+  display_value: 'Iteration 7'

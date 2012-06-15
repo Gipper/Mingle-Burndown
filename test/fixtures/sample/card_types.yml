@@ -1,0 +1,29 @@
+--- 
+- name: Story
+  position: 3
+  color: 'ff3300'
+  id: 339
+- name: Defect
+  position: 5
+  color: '000599'
+  id: 340
+- name: Task
+  position: 4
+  color: 'ffe066'
+  id: 341
+- name: Sprint
+  position: 2
+  color: 'ff0db6'
+  id: 342
+- name: Release
+  position: 1
+  color: '990024'
+  id: 343
+- name: Feature
+  position: 6
+  color: '296600'
+  id: 344
+- name: Epic Story
+  position: 7
+  color: '00d91d'
+  id: 345
