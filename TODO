@@ -1,0 +1,6 @@
+move js to separate file in assets
+allow for weekend days to account for offshore schedules
+fix the ideal line rounding error
+update flot
+update jQuery or use internal version
+just use full jQuery path and remove noConflict
