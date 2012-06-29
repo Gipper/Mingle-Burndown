@@ -4,3 +4,5 @@ fix the ideal line rounding error
 update flot
 update jQuery or use internal version
 just use full jQuery path and remove noConflict
+
+test
