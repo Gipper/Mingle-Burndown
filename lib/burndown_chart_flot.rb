@@ -38,8 +38,8 @@ class BurndownChartFlot
 
   <<-HTML
     <h2>Daily Burndown</h2>
-    <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/jquery.js"></script>
-    <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/jquery.flot.min.js"></script>
     <div id="burndownplaceholder" style="width:600px;height:300px;"></div>
     
     <script id="source" language="javascript" type="text/javascript">
