@@ -1,8 +1,17 @@
-move js to separate file in assets
+
+refactor:
+
+Move js to separate file in assets. Easier to test/proxy in. Nicer too.
+Store the retreived card data needed for the chart in a JSON var (from Ruby side). 
+Then read the JSON structure and init the chart in the JS file.
+
+minor:
+
 allow for weekend days to account for offshore schedules
 fix the ideal line rounding error
-update flot
-update jQuery or use internal version
 just use full jQuery path and remove noConflict
 
-test
+enhancements:
+
+Look into the historical settings for the hours remaining historical
+
