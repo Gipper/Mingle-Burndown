@@ -38,19 +38,11 @@ class BurndownChartFlot
 
   <<-HTML
     <h2>Daily Burndown</h2>
-    <div id="burndownplaceholder" style="width:600px;height:300px;"></div>
-    <script id="source" language="javascript" type="text/javascript">
-            var iterationStart = "#{iteration_start}";
-            var iterationEnd = "#{iteration_end}";
-            var actualHours = "#{actual_hours}";
-            var sampleRate = "#{sample_rate}";
-    </script>
+    <div id="burndownplaceholder" style="width:600px;height:300px;" data-iterationStart= "#{iteration_start}" data-iterationEnd="#{iteration_end}" data-actualHours="#{actual_hours}"></div>
     <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/jquery.min.js"></script>
     <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/jquery.flot.min.js"></script>
     <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/burndown_chart_flot.js"></script>
     
-    
-
   HTML
   
   end
