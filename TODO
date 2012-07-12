@@ -1,17 +1,22 @@
 
 refactor:
 
-Move js to separate file in assets. Easier to test/proxy in. Nicer too.
-Store the retreived card data needed for the chart in a JSON var (from Ruby side). 
-Then read the JSON structure and init the chart in the JS file.
+namespace the js into a nice object with methods. put the whole thing in a closure maybe.
 
 minor:
 
 allow for weekend days to account for offshore schedules
 fix the ideal line rounding error
-just use full jQuery path and remove noConflict
+
 
 enhancements:
 
-Look into the historical settings for the hours remaining historical
+Look into the historical settings for the hours remaining historical (History API - Card Property)
 
+
+DONE:
+
+just use full jQuery path and remove noConflict
+Move js to separate file in assets. Easier to test/proxy in. Nicer too.
+Store the retreived card data needed for the chart in a JSON var (from Ruby side). 
+Then read the JSON structure and init the chart in the JS file.
