@@ -12,11 +12,14 @@ mingleBurndown = {
 
     if (iterationStart && iterationEnd && actualHours){
      
-        mingleBurndown.drawBurndown(instance, iterationStart, iterationEnd, actualHours);
+        mingleBurndown.drawBurndown(instance, iterationStart, iterationEnd, actualHours, sampleRate);
+        //mingleBurndown.drawBurndown(instance, iterationStart, iterationEnd, actualHours);
+
      }
     },
 
-    drawBurndown: function (instance, iterationStart, iterationEnd, actualHours){
+    drawBurndown: function (instance, iterationStart, iterationEnd, actualHours, sampleRate){
+		// drawBurndown: function (instance, iterationStart, iterationEnd, actualHours){
 
         // set up the plot values
    
@@ -56,8 +59,6 @@ mingleBurndown = {
     iterationDays = [];
     numdays = 1;
     todayIndex = -1;
-
-    sampleRate = "Daily";
     
     while (startDate <= deliveryDate) {
       // push current day number and date into ticks array if it is a weekday

@@ -22,6 +22,7 @@ class BurndownChartFlot
     
     # sampleRate = daily or weekly
     sample_rate = @parameters['Sample_Rate']
+    target_Instance = @parameters['Target']
 
 
     if getIterationStart.nil? or getIterationEnd.nil? or getActualHours.nil?
@@ -35,13 +36,13 @@ class BurndownChartFlot
       actual_hours = @project.execute_mql(getActualHours).first.values
     end
 
-    randID = 1 + rand(900)
-    burndownInstance = "mingleBurndown#{randID}" 
+    # randID = 1 + rand(900)
+    burndownInstance = "mingleBurndown#{target_Instance}" 
 
 
   <<-HTML
     <h2>Daily Burndown</h2>
-    <div class="mingleBurndown" id="#{burndownInstance}" style="width:600px;height:300px;" data-iterationStart= "#{iteration_start}" data-iterationEnd="#{iteration_end}" data-actualHours="#{actual_hours}"></div>
+    <div class="mingleBurndown" id="#{burndownInstance}" style="width:600px;height:300px;" data-iterationStart= "#{iteration_start}" data-iterationEnd="#{iteration_end}" data-actualHours="#{actual_hours}"> data-sampleRate="#{Sample_Rate}"</div>
     <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/jquery.min.js"></script>
     <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/jquery.flot.min.js"></script>
     <script language="javascript" type="text/javascript" src="../../../../plugin_assets/burndown_chart_flot/javascripts/burndown_chart_flot.js"></script>
