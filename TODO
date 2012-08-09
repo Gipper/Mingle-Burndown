@@ -20,3 +20,4 @@ just use full jQuery path and remove noConflict
 Move js to separate file in assets. Easier to test/proxy in. Nicer too.
 Store the retreived card data needed for the chart in a JSON var (from Ruby side). 
 Then read the JSON structure and init the chart in the JS file.
+use a class rather than ID to find data and support multiple burndowns on a page.
