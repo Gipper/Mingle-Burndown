@@ -5,10 +5,10 @@ mingleBurndown = {
 
     // get the data from our instance
     // it's better to use individial data attributes here...we have things like dates that will not translate well.
-    var iterationStart = jQuery("#" + instance).data('iterationStart');
-    var iterationEnd =  jQuery("#" + instance).data('iterationEnd');
-    var actualHours = jQuery("#" + instance).data('actualHours');
-    var sampleRate = jQuery("#" + instance).data('sampleRate');
+    var iterationStart = jQuery("#" + instance).data('iterationstart');
+    var iterationEnd =  jQuery("#" + instance).data('iterationend');
+    var actualHours = jQuery("#" + instance).data('actualhours');
+    var sampleRate = jQuery("#" + instance).data('samplerate');
 
     if (iterationStart && iterationEnd && actualHours){
      
@@ -19,11 +19,11 @@ mingleBurndown = {
     },
 
     drawBurndown: function (instance, iterationStart, iterationEnd, actualHours, sampleRate){
-		// drawBurndown: function (instance, iterationStart, iterationEnd, actualHours){
+    // drawBurndown: function (instance, iterationStart, iterationEnd, actualHours){
 
         // set up the plot values
    
-        iterationLength = mingleBurndown.getIterationDays(iterationStart, iterationEnd).length;
+        iterationLength = mingleBurndown.getIterationDays(iterationStart, iterationEnd, sampleRate).length;
         actualData = mingleBurndown.splitMingleData(actualHours);
         actualBurndown = mingleBurndown.createActualBurndown(actualData);
         idealBurndown = mingleBurndown.createIdealBurndown (actualData[0], iterationLength);
@@ -47,10 +47,10 @@ mingleBurndown = {
      },
 
      // Private helper functions
-    getIterationDays: function (sDate, eDate){
+    getIterationDays: function (sDate, eDate,sampleRate){
     // Constructs chart tick labels based on start and end dates. (skips weekends)
     // Now with weekly ability.
-    
+    var rate = 'Daily'
     var now = new Date();
     var startDate = new Date(sDate);
     var endDate = new Date(eDate);
@@ -64,7 +64,7 @@ mingleBurndown = {
       // push current day number and date into ticks array if it is a weekday
       // added 8/20/09: Only count Wednesdays if plotting weekly.
       
-      if (sampleRate == "Weekly") {
+      if (rate == "Weekly") {
         if (startDate.getDay() == 3) {
                                               
           // capture today index for drawing today column.
